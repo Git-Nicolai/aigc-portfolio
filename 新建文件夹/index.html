@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AIGC Visual Creator Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,"Microsoft YaHei",sans-serif}
+body{background:#050505;color:#fff;overflow-x:hidden;scroll-behavior:smooth}
+html{scroll-behavior:smooth}
+
+/* ===== HERO ===== */
+.hero{height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0a0a1a 0%,#0d1117 25%,#0a0a1a 50%,#0d0d1a 75%,#0a0a1a 100%);background-size:400% 400%;animation:bgShift 15s ease infinite}
+@keyframes bgShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(59,130,246,.08) 0%,transparent 60%)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(139,92,246,.06) 0%,transparent 50%)}
+.overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),#050505)}
+nav{position:absolute;top:40px;left:8%;right:8%;display:flex;justify-content:space-between;z-index:5}
+.logo{font-size:25px;font-weight:900;background:linear-gradient(90deg,#3b82f6,#a855f7);-webkit-background-clip:text;color:transparent}
+.menu span{margin-left:35px;color:#aaa;cursor:pointer;transition:.3s}
+.menu span:hover{color:#3b82f6}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:0 20px}
+.hero h1{font-size:90px;line-height:1;font-weight:900}
+.gradient{background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ec4899);-webkit-background-clip:text;color:transparent;background-size:200% 200%;animation:gradientShift 4s ease infinite}
+@keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero p{margin-top:30px;font-size:22px;color:#aaa;line-height:1.8}
+.btn{display:inline-block;margin-top:45px;padding:18px 45px;border-radius:50px;background:linear-gradient(90deg,#3b82f6,#8b5cf6);cursor:pointer;transition:.4s;font-weight:700;text-decoration:none;color:#fff}
+.btn:hover{transform:scale(1.1);box-shadow:0 0 40px #8b5cf6}
+
+/* ===== SECTIONS ===== */
+section{padding:120px 8%}
+.title{font-size:60px;font-weight:900;margin-bottom:70px;position:relative;display:inline-block}
+.title::after{content:'';position:absolute;bottom:-10px;left:0;width:60%;height:4px;background:linear-gradient(90deg,#3b82f6,transparent);border-radius:2px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+
+/* ===== CARDS ===== */
+.card{height:400px;border-radius:30px;overflow:hidden;position:relative;background:#111;cursor:pointer;transition:.5s;border:1px solid #222}
+.card:hover{transform:translateY(-20px) scale(1.03);box-shadow:0 30px 80px rgba(0,0,0,.7);border-color:#3b82f6}
+.card img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover img{transform:scale(1.1)}
+.card div{position:absolute;bottom:0;padding:30px;background:linear-gradient(transparent,rgba(0,0,0,.95));width:100%}
+.card div h2{font-size:22px;margin-bottom:8px}
+.card div p{color:#aaa;font-size:14px}
+
+/* ===== SKILLS ===== */
+.skills{display:flex;flex-wrap:wrap;gap:20px}
+.skill{padding:20px 35px;border-radius:50px;background:#111;border:1px solid #333;transition:.4s;font-weight:700;font-size:16px;cursor:default}
+.skill:hover{background:linear-gradient(135deg,#3b82f6,#8b5cf6);transform:translateY(-10px);box-shadow:0 20px 40px rgba(59,130,246,.3);border-color:transparent}
+
+/* ===== TOOLS ===== */
+.tool{background:linear-gradient(135deg,#111,#080808);padding:40px;border-radius:30px;border:1px solid #222;transition:.4s}
+.tool:hover{border-color:#3b82f6;transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.tool h3{font-size:30px;margin-bottom:20px;background:linear-gradient(90deg,#3b82f6,#a855f7);-webkit-background-clip:text;color:transparent}
+.tool p{color:#aaa;line-height:2}
+
+/* ===== ABOUT ===== */
+.about{font-size:22px;line-height:2;color:#bbb;max-width:900px}
+
+/* ===== FOOTER ===== */
+footer{padding:60px;text-align:center;color:#666;border-top:1px solid #111}
+
+/* ===== CANVAS ===== */
+canvas{position:absolute;top:0;left:0;z-index:1;pointer-events:none}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+.hero h1{font-size:48px}
+.grid{grid-template-columns:1fr}
+.title{font-size:36px}
+.menu span{margin-left:15px;font-size:14px}
+nav{left:5%;right:5%}
+section{padding:80px 5%}
+.about{font-size:18px}
+}
+
+@media(max-width:600px){
+.hero h1{font-size:36px}
+.hero p{font-size:16px}
+.card{height:280px}
+.skill{padding:15px 25px;font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+<div class="hero-bg"></div>
+<canvas id="canvas"></canvas>
+<div class="overlay"></div>
+
+<nav>
+<div class="logo">AIGC LAB</div>
+<div class="menu">
+<span onclick="document.getElementById('works').scrollIntoView({behavior:'smooth'})">作品</span>
+<span onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">经历</span>
+<span onclick="document.getElementById('ability').scrollIntoView({behavior:'smooth'})">能力</span>
+<span onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">关于</span>
+</div>
+</nav>
+
+<div class="hero-content">
+<h1>AI <span class="gradient">VISUAL</span><br>CREATOR</h1>
+<p>探索人工智能与视觉艺术融合的新表达<br>AI短剧 &middot; AI影像 &middot; AI视觉系统</p>
+<a href="#works" class="btn">查看作品</a>
+</div>
+</div>
+
+<!-- ===== WORKS ===== -->
+<section id="works">
+<h2 class="title">Selected Works</h2>
+<div class="grid">
+<div class="card">
+<img src="work1.jpg" alt="AI短剧《未来都市》">
+<div><h2>AI短剧《未来都市》</h2><p>AI导演 / 分镜 / 视频生成</p></div>
+</div>
+<div class="card">
+<img src="work2.jpg" alt="AI商业视觉">
+<div><h2>AI商业视觉</h2><p>产品广告视觉生成</p></div>
+</div>
+<div class="card">
+<img src="work3.jpg" alt="AI信息流内容">
+<div><h2>AI信息流内容</h2><p>短视频商业包装</p></div>
+</div>
+</div>
+</section>
+
+<!-- ===== ABILITY ===== -->
+<section id="ability">
+<h2 class="title">Creative Ability</h2>
+<div class="skills">
+<div class="skill">AI短剧生成</div>
+<div class="skill">AI图片生成</div>
+<div class="skill">AI信息流</div>
+<div class="skill">视频剪辑</div>
+<div class="skill">Skill创建</div>
+<div class="skill">API调用</div>
+</div>
+</section>
+
+<!-- ===== TOOLS ===== -->
+<section>
+<h2 class="title">AI Tools</h2>
+<div class="grid">
+<div class="tool">
+<h3>即梦 AI</h3>
+<p>AI图片生成<br>商业视觉创作<br>角色设计</p>
+</div>
+<div class="tool">
+<h3>可灵 AI</h3>
+<p>AI视频生成<br>动态镜头设计<br>影视化创作</p>
+</div>
+<div class="tool">
+<h3>小云雀 / Libtv</h3>
+<p>AI内容生产<br>视频工作流<br>自动化创作</p>
+</div>
+</div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+<h2 class="title">Project Experience</h2>
+<div class="about">
+2025-2026<br><br>
+负责AI视觉内容生产流程搭建。<br>
+从创意策划、角色设计、AI生成、视频剪辑，到最终商业内容输出。<br><br>
+建立AI工作流：<br>
+Prompt设计 → 模型生成 → 素材管理 → 视频包装 → 商业交付。
+</div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+<h2 class="title">About Me</h2>
+<div class="about">
+我是 Nicolai，一名专注于AIGC视觉设计方向的创作者。<br><br>
+擅长利用AI工具探索：<br>
+视觉设计、影视短剧、商业广告、数字角色、动态影像。<br><br>
+我的目标：让AI成为新的视觉生产力。
+</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>&copy;2026 AIGC Visual Creator</footer>
+
+<script>
+// 粒子动画
+const canvas=document.getElementById("canvas");
+const ctx=canvas.getContext("2d");
+canvas.width=innerWidth;
+canvas.height=innerHeight;
+
+let particles=[];
+for(let i=0;i<120;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2,
+dx:(Math.random()-.5),
+dy:(Math.random()-.5)
+});
+}
+
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+particles.forEach(p=>{
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="rgba(80,120,255,.8)";
+ctx.fill();
+p.x+=p.dx;
+p.y+=p.dy;
+if(p.x<0||p.x>canvas.width)p.dx*=-1;
+if(p.y<0||p.y>canvas.height)p.dy*=-1;
+});
+requestAnimationFrame(animate);
+}
+animate();
+
+// 鼠标光效
+document.addEventListener("mousemove",e=>{
+document.body.style.background=`radial-gradient(600px at ${e.clientX}px ${e.clientY}px,rgba(59,130,246,.15),#050505)`;
+});
+
+// 窗口大小调整
+window.addEventListener("resize",()=>{
+canvas.width=innerWidth;
+canvas.height=innerHeight;
+});
+</script>
+</body>
+</html>
