@@ -3,6 +3,15 @@
 Thumbs.db
 desktop.ini
 
+# Dependencies
+node_modules/
+package.json
+package-lock.json
+
+# Build output
+site.zip
+deploy.js
+
 # Editor
 .vscode/
 .idea/
