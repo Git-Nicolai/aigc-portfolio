@@ -500,7 +500,7 @@ section {
 }
 
 .capability-card {
-  background: var(--surface);
+  background: rgba(17, 17, 24, 0.55);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
   padding: 32px 28px;
