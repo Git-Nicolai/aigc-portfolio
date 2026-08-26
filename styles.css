@@ -412,10 +412,9 @@ input, textarea { font-family: inherit; }
 .ticker-track {
   display: flex;
   white-space: nowrap;
-  animation: ticker 30s linear infinite;
   color: var(--text-sub);
   font-size: 0.9rem;
-  width: fit-content;
+  will-change: transform;
 }
 
 .ticker-track > span {
