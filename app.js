@@ -167,6 +167,20 @@
     svg.innerHTML = html + svg.innerHTML;
   }
 
+  function renderSkillBars() {
+    var bars = document.getElementById('skillBars');
+    if (!bars) return;
+    bars.innerHTML = SKILL_LEVELS.map(function (s) {
+      return '<div class="skill-bar-item">' +
+        '<div class="skill-bar-header">' +
+        '<span class="skill-bar-label">' + s.label + '</span>' +
+        '<span class="skill-bar-value">' + s.value + '%</span>' +
+        '</div>' +
+        '<div class="skill-bar-track"><div class="skill-bar-fill" style="width:' + s.value + '%"></div></div>' +
+        '</div>';
+    }).join('');
+  }
+
   function renderTools() {
     var grid = document.getElementById('toolsGrid');
     grid.innerHTML = TOOLS.map(function (t) {
@@ -466,6 +480,7 @@
     renderWorks('all');
     renderTimeline();
     renderRadar();
+    renderSkillBars();
     renderTools();
     observeReveals();
     initTicker();
