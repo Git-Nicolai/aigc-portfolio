@@ -161,7 +161,7 @@
       var anchor = 'middle';
       if (lx < cx - 10) anchor = 'end';
       if (lx > cx + 10) anchor = 'start';
-      html += '<text x="' + lx.toFixed(1) + '" y="' + (ly + 5).toFixed(1) + '" text-anchor="' + anchor + '" fill="#CDD0D5" font-size="13" font-family="inherit">' + SKILL_LEVELS[li2].label + '</text>';
+      html += '<text x="' + lx.toFixed(1) + '" y="' + (ly + 5).toFixed(1) + '" text-anchor="' + anchor + '" fill="#CDD0D5" font-size="14" font-family="inherit">' + SKILL_LEVELS[li2].label + '</text>';
     }
 
     svg.innerHTML = html + svg.innerHTML;
