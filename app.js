@@ -37,10 +37,10 @@
   ];
 
   const TOOLS = [
-    { name: '即梦', icon: '梦' },
-    { name: '小云雀', icon: '雀' },
-    { name: 'Libtv', icon: 'L' },
-    { name: '可灵', icon: '灵' }
+    { name: '即梦', icon: '梦', url: 'https://jimeng.jianying.com/' },
+    { name: '小云雀', icon: '雀', url: 'https://xyq.jianying.com/' },
+    { name: 'Libtv', icon: 'L', url: 'https://www.liblib.tv/' },
+    { name: '可灵', icon: '灵', url: 'https://klingai.com/' }
   ];
 
   const FILTER_CATS = [
@@ -184,10 +184,10 @@
   function renderTools() {
     var grid = document.getElementById('toolsGrid');
     grid.innerHTML = TOOLS.map(function (t) {
-      return '<div class="tool-card">' +
+      return '<a href="' + t.url + '" target="_blank" rel="noopener" class="tool-card">' +
         '<div class="tool-icon">' + t.icon + '</div>' +
         '<span>' + t.name + '</span>' +
-        '</div>';
+        '</a>';
     }).join('');
   }
 

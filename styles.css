@@ -816,6 +816,8 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 14px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .tool-card:hover {
