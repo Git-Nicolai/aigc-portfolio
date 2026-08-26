@@ -369,36 +369,31 @@
   var tickerTrack = document.getElementById('tickerTrack');
   var tickerRAF = null;
   var tickerPos = 0;
-  var tickerSetWidth = 0;
+  var tickerSpeed = 0.8;
 
   function initTicker() {
     if (!tickerTrack) return;
     var items = tickerTrack.children;
     var html = '';
-    // Clone 4 copies to ensure no gaps
+    // Clone 4 copies
     for (var c = 0; c < 4; c++) {
       for (var i = 0; i < items.length; i++) {
         html += items[i].outerHTML;
       }
     }
     tickerTrack.innerHTML = html;
-    // Measure one full set width
-    var firstSet = 0;
-    var count = items.length;
-    var allChildren = tickerTrack.children;
-    for (var j = 0; j < count; j++) {
-      firstSet += allChildren[j].offsetWidth;
-    }
-    tickerSetWidth = firstSet;
     tickerPos = 0;
     tickerTrack.style.transform = 'translateX(0)';
     runTicker();
   }
 
   function runTicker() {
-    tickerPos -= 0.8; // pixels per frame
-    if (tickerPos <= -tickerSetWidth) {
-      tickerPos += tickerSetWidth;
+    tickerPos -= tickerSpeed;
+    var first = tickerTrack.firstElementChild;
+    if (first && tickerPos <= -first.offsetWidth) {
+      // Move scrolled-out first child to the end
+      tickerPos += first.offsetWidth;
+      tickerTrack.appendChild(first);
     }
     tickerTrack.style.transform = 'translateX(' + tickerPos + 'px)';
     tickerRAF = requestAnimationFrame(runTicker);
