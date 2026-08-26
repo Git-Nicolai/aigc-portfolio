@@ -486,6 +486,7 @@
     renderTimeline();
     renderRadar();
     renderSkillBars();
+    renderTools();
     observeReveals();
     initTicker();
   }
