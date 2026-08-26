@@ -189,9 +189,8 @@
   function renderTools() {
     var grid = document.getElementById('toolsGrid');
     grid.innerHTML = TOOLS.map(function (t) {
-      return '<a href="' + t.url + '" target="_blank" rel="noopener" class="tool-card">' +
+      return '<a href="' + t.url + '" target="_blank" rel="noopener" class="tool-card" title="' + t.name + '">' +
         '<div class="tool-icon">' + t.icon + '</div>' +
-        '<span>' + t.name + '</span>' +
         '</a>';
     }).join('');
   }
