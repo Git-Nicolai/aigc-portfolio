@@ -114,7 +114,7 @@
 
   function renderRadar() {
     var svg = document.getElementById('radarChart');
-    var cx = 150, cy = 150, r = 120;
+    var cx = 170, cy = 170, r = 120;
     var n = SKILL_LEVELS.length;
     var levels = [0.25, 0.5, 0.75, 1];
 
@@ -161,7 +161,7 @@
       var anchor = 'middle';
       if (lx < cx - 10) anchor = 'end';
       if (lx > cx + 10) anchor = 'start';
-      html += '<text x="' + lx.toFixed(1) + '" y="' + (ly + 4).toFixed(1) + '" text-anchor="' + anchor + '" fill="#9CA3AF" font-size="11" font-family="inherit">' + SKILL_LEVELS[li2].label + '</text>';
+      html += '<text x="' + lx.toFixed(1) + '" y="' + (ly + 5).toFixed(1) + '" text-anchor="' + anchor + '" fill="#CDD0D5" font-size="13" font-family="inherit">' + SKILL_LEVELS[li2].label + '</text>';
     }
 
     svg.innerHTML = html + svg.innerHTML;
