@@ -38,7 +38,7 @@
 
   const TOOLS = [
     { name: '即梦', icon: '即梦', url: 'https://jimeng.jianying.com/' },
-    { name: '小云雀', icon: '雀', url: 'https://xyq.jianying.com/' },
+    { name: '小云雀', icon: '小云雀', url: 'https://xyq.jianying.com/' },
     { name: 'Libtv', icon: 'L', url: 'https://www.liblib.tv/' },
     { name: '可灵', icon: '灵', url: 'https://klingai.com/' }
   ];

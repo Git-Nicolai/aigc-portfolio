@@ -855,14 +855,14 @@ section {
 }
 
 .tool-icon {
-  width: 56px;
+  width: 64px;
   height: 56px;
   border-radius: var(--r-sm);
   background: var(--accent-dim);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--accent-2);
 }
