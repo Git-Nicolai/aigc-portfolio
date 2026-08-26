@@ -114,7 +114,7 @@
 
   function renderRadar() {
     var svg = document.getElementById('radarChart');
-    var cx = 170, cy = 170, r = 120;
+    var cx = 200, cy = 200, r = 120;
     var n = SKILL_LEVELS.length;
     var levels = [0.25, 0.5, 0.75, 1];
 
