@@ -947,7 +947,7 @@ section {
 }
 
 .contact-info-side {
-  background: var(--surface);
+  background: rgba(17, 17, 24, 0.55);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 40px;
@@ -1010,7 +1010,7 @@ section {
 }
 
 .contact-form {
-  background: var(--surface);
+  background: rgba(17, 17, 24, 0.55);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 40px;
