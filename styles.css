@@ -885,28 +885,19 @@ section {
 
 .about-text .section-title { margin-bottom: 20px; }
 
+.about-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  margin-bottom: 16px;
+}
+
 .about-bio {
   color: var(--text-sub);
   line-height: 1.8;
   margin-bottom: 24px;
   font-size: 0.95rem;
 }
-
-.about-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text-sub);
-  font-size: 0.9rem;
-}
-
-.contact-item svg { color: var(--accent-2); flex-shrink: 0; }
 
 .about-quote {
   text-align: right;
