@@ -411,11 +411,16 @@ input, textarea { font-family: inherit; }
 
 .ticker-track {
   display: flex;
-  gap: 24px;
   white-space: nowrap;
   animation: ticker 30s linear infinite;
   color: var(--text-sub);
   font-size: 0.9rem;
+  width: fit-content;
+}
+
+.ticker-track > span {
+  padding: 0 12px;
+  flex-shrink: 0;
 }
 
 .ticker-dot { color: var(--accent); }
