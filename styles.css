@@ -868,8 +868,10 @@ section {
 }
 
 .tool-card span {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
+  color: var(--accent-2);
+  white-space: nowrap;
 }
 
 /* === About === */
