@@ -364,6 +364,58 @@
     }
   });
 
+  /* ===== MOUSE TRAIL ===== */
+
+  var canvas = document.createElement('canvas');
+  canvas.id = 'mouseTrail';
+  var ctx = canvas.getContext('2d');
+  document.body.appendChild(canvas);
+
+  var mx = -100, my = -100;
+  var trail = [];
+  var maxTrail = 30;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  document.addEventListener('mousemove', function (e) {
+    mx = e.clientX;
+    my = e.clientY;
+    trail.push({ x: mx, y: my, life: 1, size: 2 + Math.random() * 3 });
+    if (trail.length > maxTrail) trail.shift();
+  });
+
+  function drawTrail() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (var i = 0; i < trail.length; i++) {
+      var p = trail[i];
+      p.life -= 0.03;
+      if (p.life <= 0) { trail.splice(i, 1); i--; continue; }
+      var alpha = p.life * 0.6;
+      var r = p.size * p.life;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(139, 92, 246, ' + alpha + ')';
+      ctx.fill();
+    }
+    // Main cursor glow
+    if (trail.length > 0) {
+      var grad = ctx.createRadialGradient(mx, my, 0, mx, my, 40);
+      grad.addColorStop(0, 'rgba(168, 85, 247, 0.15)');
+      grad.addColorStop(1, 'rgba(139, 92, 246, 0)');
+      ctx.beginPath();
+      ctx.arc(mx, my, 40, 0, Math.PI * 2);
+      ctx.fillStyle = grad;
+      ctx.fill();
+    }
+    requestAnimationFrame(drawTrail);
+  }
+  drawTrail();
+
   /* ===== TICKER ===== */
 
   var tickerTrack = document.getElementById('tickerTrack');
