@@ -566,12 +566,18 @@ section {
 /* === Works === */
 .works .section-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .works .section-header .section-title { margin-bottom: 0; }
+
+.works .section-link {
+  position: absolute;
+  right: 0;
+}
 
 .filter-bar {
   display: flex;
