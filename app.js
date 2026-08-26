@@ -66,7 +66,7 @@
         '</div>' +
         '</div>';
     }).join('');
-    grid.classList.add('stagger-children');
+    grid.classList.add('stagger-children', 'reveal');
   }
 
   function renderFilterBar() {
