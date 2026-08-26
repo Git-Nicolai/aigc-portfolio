@@ -4,12 +4,12 @@
   /* ===== DATA ===== */
 
   const SERVICES = [
-    { icon: '🎬', title: 'AI 短剧生成', desc: '从剧本到成片，AI 驱动全流程短剧内容创作' },
-    { icon: '🖼️', title: 'AI 图片生成', desc: '高质量 AI 图像生成，覆盖多种风格与场景' },
-    { icon: '📊', title: 'AI 信息流', desc: 'AI 驱动的信息可视化与内容流设计' },
-    { icon: '✂️', title: '视频剪辑', desc: '专业级视频后期剪辑与特效制作' },
-    { icon: '🧩', title: 'Skill 创建', desc: '自定义 AI Skill 开发，提升工作流效率' },
-    { icon: '🔌', title: 'API 调用', desc: '多平台 AI 工具 API 集成与自动化调用' }
+    { id: '01', title: '专业提示词工程', desc: '精准拆解创作需求，将创意转化为标准化 AI 生成指令。适配图片、视频各类创作场景，精准把控画面风格与细节，高效提升出图质量与效率。' },
+    { id: '02', title: '精准模型选型与生成', desc: '针对国风、二次元、3D、影视、广告等不同场景，精准匹配最优 AI 模型。通过智能控图技术锁定画面结构，快速批量产出优质原创初稿。' },
+    { id: '03', title: '画面精修与迭代优化', desc: '修复 AI 画面畸形、透视、细节缺陷，通过局部精修、高清超分、多轮迭代，优化画面质感，达标商用视觉效果。' },
+    { id: '04', title: 'AI 后期合成与二次创作', desc: '打通 AI 素材后期全流程，支持抠图、调色、光影优化、画面拓展等二次编辑，联动专业设计工具，快速输出海报、分镜、短视频成品。' },
+    { id: '05', title: '视觉一致性管控', desc: '通过参数固化、模型定制、参考锁定等技术，统一人设、IP、风格与色调，解决 AI 画面不稳定问题，适配批量系列化创作。' },
+    { id: '06', title: '合规校验与标准化交付', desc: '全维度合规筛查，规避版权与内容风险。统一商用输出标准，规范尺寸、画质与格式，实现 AI 视觉创作一站式合规交付。' }
   ];
 
   const WORKS = [
@@ -57,10 +57,12 @@
   function renderServices() {
     var grid = document.getElementById('servicesGrid');
     grid.innerHTML = SERVICES.map(function (s) {
-      return '<div class="service-card">' +
-        '<div class="service-icon">' + s.icon + '</div>' +
+      return '<div class="capability-card">' +
+        '<div class="capability-num">' + s.id + '</div>' +
+        '<div class="capability-body">' +
         '<h3>' + s.title + '</h3>' +
         '<p>' + s.desc + '</p>' +
+        '</div>' +
         '</div>';
     }).join('');
     grid.classList.add('stagger-children');

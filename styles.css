@@ -467,72 +467,69 @@ section {
 
 .section-link:hover { color: var(--text); }
 
-/* === Services === */
-.services { padding-bottom: 60px; }
+/* === Capabilities === */
+.services { padding: 100px 0; }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.service-card {
+.capability-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
-  padding: 32px 20px;
-  text-align: center;
-  transition: all 0.3s var(--ease);
+  padding: 32px 28px;
+  display: flex;
+  gap: 20px;
+  transition: all 0.35s var(--ease);
   position: relative;
   overflow: hidden;
 }
 
-.service-card::before {
+.capability-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--grad-surface);
+  background: radial-gradient(140% 140% at 0% 0%, rgba(139, 92, 246, 0.06), transparent 60%);
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.35s;
 }
 
-.service-card:hover {
+.capability-card:hover {
   border-color: var(--border-glow);
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.12);
 }
 
-.service-card:hover::before { opacity: 1; }
+.capability-card:hover::before { opacity: 1; }
 
-.service-icon {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 16px;
-  border-radius: var(--r-sm);
-  background: var(--accent-dim);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-2);
-  font-size: 1.5rem;
-  position: relative;
-  z-index: 1;
+.capability-num {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0.7;
 }
 
-.service-card h3 {
-  font-size: 0.95rem;
+.capability-body { flex: 1; }
+
+.capability-body h3 {
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 8px;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 10px;
+  color: var(--text);
 }
 
-.service-card p {
-  font-size: 0.8rem;
+.capability-body p {
+  font-size: 0.85rem;
   color: var(--text-sub);
-  line-height: 1.5;
-  position: relative;
-  z-index: 1;
+  line-height: 1.7;
 }
 
 /* === Works === */
@@ -1229,7 +1226,7 @@ section {
 
 /* === Responsive === */
 @media (max-width: 1024px) {
-  .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
   .works-grid { grid-template-columns: repeat(2, 1fr); }
   .skills-layout { grid-template-columns: 1fr; gap: 40px; }
   .tools-grid { grid-template-columns: repeat(2, 1fr); }
