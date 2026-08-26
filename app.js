@@ -370,6 +370,7 @@
   var tickerRAF = null;
   var tickerPos = 0;
   var tickerSpeed = 0.8;
+  var tickerPaused = false;
 
   function initTicker() {
     if (!tickerTrack) return;
@@ -384,18 +385,24 @@
     tickerTrack.innerHTML = html;
     tickerPos = 0;
     tickerTrack.style.transform = 'translateX(0)';
+
+    // Hover pause
+    tickerTrack.addEventListener('mouseenter', function () { tickerPaused = true; });
+    tickerTrack.addEventListener('mouseleave', function () { tickerPaused = false; });
+
     runTicker();
   }
 
   function runTicker() {
-    tickerPos -= tickerSpeed;
-    var first = tickerTrack.firstElementChild;
-    if (first && tickerPos <= -first.offsetWidth) {
-      // Move scrolled-out first child to the end
-      tickerPos += first.offsetWidth;
-      tickerTrack.appendChild(first);
+    if (!tickerPaused) {
+      tickerPos -= tickerSpeed;
+      var first = tickerTrack.firstElementChild;
+      if (first && tickerPos <= -first.offsetWidth) {
+        tickerPos += first.offsetWidth;
+        tickerTrack.appendChild(first);
+      }
+      tickerTrack.style.transform = 'translateX(' + tickerPos + 'px)';
     }
-    tickerTrack.style.transform = 'translateX(' + tickerPos + 'px)';
     tickerRAF = requestAnimationFrame(runTicker);
   }
 

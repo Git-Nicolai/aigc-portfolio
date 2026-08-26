@@ -424,15 +424,6 @@ input, textarea { font-family: inherit; }
 
 .ticker-dot { color: var(--accent); }
 
-.ticker:hover .ticker-track {
-  animation-play-state: paused;
-}
-
-@keyframes ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
 /* === Section Common === */
 section {
   position: relative;
