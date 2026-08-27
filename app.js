@@ -252,6 +252,97 @@
     img.classList.toggle('is-fullscreen');
   });
 
+  /* ===== ALL WORKS MODAL ===== */
+
+  var allWorksModal = document.getElementById('allWorksModal');
+  var allWorksOverlay = document.getElementById('allWorksOverlay');
+  var allWorksClose = document.getElementById('allWorksClose');
+  var allWorksBody = document.getElementById('allWorksBody');
+
+  var sectionLink = document.querySelector('.section-link');
+  if (sectionLink) {
+    sectionLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      openAllWorks();
+    });
+  }
+
+  function openAllWorks() {
+    renderAllWorks();
+    allWorksModal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeAllWorks() {
+    allWorksModal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  function renderAllWorks() {
+    // Group works by category
+    var grouped = {};
+    WORKS.forEach(function (w) {
+      if (!grouped[w.cat]) grouped[w.cat] = [];
+      grouped[w.cat].push(w);
+    });
+
+    var html = '';
+    // Use FILTER_CATS order
+    FILTER_CATS.forEach(function (cat) {
+      var works = grouped[cat.key];
+      if (!works || works.length === 0) return;
+      html += '<div class="all-works-category">';
+      html += '<div class="all-works-cat-title">' + cat.label + '</div>';
+      html += '<div class="all-works-cat-grid">';
+      works.forEach(function (w) {
+        html += '<div class="all-works-card" data-id="' + w.id + '">';
+        html += '<div class="all-works-card-img">';
+        if (w.video) {
+          html += '<video src="' + w.video + '" muted loop playsinline></video>';
+        } else {
+          html += '<img src="' + w.img + '" alt="' + w.title + '" loading="lazy">';
+        }
+        html += '</div>';
+        html += '<div class="all-works-card-info">';
+        html += '<h4>' + w.title + '</h4>';
+        html += '<div class="all-works-card-tags">';
+        w.tags.forEach(function (t) {
+          html += '<span>' + t + '</span>';
+        });
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+      });
+      html += '</div>';
+      html += '</div>';
+    });
+
+    allWorksBody.innerHTML = html;
+
+    // Bind card clicks
+    allWorksBody.querySelectorAll('.all-works-card').forEach(function (card) {
+      card.addEventListener('click', function () {
+        var id = card.dataset.id;
+        var work = WORKS.find(function (w) { return w.id === id; });
+        if (!work) return;
+        if (work.link) { window.open(work.link, '_blank'); return; }
+        closeAllWorks();
+        setTimeout(function () { openLightbox(work); }, 400);
+      });
+    });
+
+    // Auto-play videos in view
+    allWorksBody.querySelectorAll('video').forEach(function (v) { v.play(); });
+  }
+
+  allWorksClose.addEventListener('click', closeAllWorks);
+  allWorksOverlay.addEventListener('click', closeAllWorks);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && allWorksModal.classList.contains('is-open')) {
+      closeAllWorks();
+    }
+  });
+
   /* ===== FILTER ===== */
 
   var filterCarouselIndex = 0;
