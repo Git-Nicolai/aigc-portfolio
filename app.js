@@ -24,8 +24,8 @@
     { id: 'w15', cat: '数字人', title: '作品名称 15', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签Q', '标签R'], video: 'assets/work-video15.mp4' },
     { id: 'w16', cat: '数字人', title: '作品名称 16', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签S', '标签T'], video: 'assets/work-video16.mp4' },
     { id: 'w17', cat: '数字人', title: '作品名称 17', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签U', '标签V'], video: 'assets/work-video17.mp4' },
-    { id: 'w4', cat: '游戏买量视频', title: '未来出行·概念片', desc: '赛博朋克风格未来出行概念视频，展现 AI 视觉在科幻题材中的表现力。', tags: ['视频剪辑', '科幻', '概念'], img: 'assets/work-car.jpg', link: 'https://www.bilibili.com/video/BV1qThc6LEmQ/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w18', cat: '游戏买量视频', title: '作品名称 18', desc: '游戏买量视频 AI 视觉作品描述。', tags: ['游戏买量', '标签W', '标签X'], img: 'assets/work-car.jpg', link: 'https://www.bilibili.com/video/BV1CdhF6XEHM/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w4', cat: '游戏买量视频', title: '未来出行·概念片', desc: '赛博朋克风格未来出行概念视频，展现 AI 视觉在科幻题材中的表现力。', tags: ['视频剪辑', '科幻', '概念'], img: 'assets/work-car-new.png', link: 'https://www.bilibili.com/video/BV1qThc6LEmQ/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w18', cat: '游戏买量视频', title: '作品名称 18', desc: '游戏买量视频 AI 视觉作品描述。', tags: ['游戏买量', '标签W', '标签X'], img: 'assets/work-car-new2.png', link: 'https://www.bilibili.com/video/BV1CdhF6XEHM/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w5', cat: 'ai信息流', title: 'AI 信息流可视化', desc: '基于 AI 的数据可视化信息流设计，将复杂数据转化为直观视觉语言。', tags: ['AI 信息流', '数据', '可视化'], img: 'assets/work-infoflow.jpg' },
     { id: 'w6', cat: 'agent', title: 'API 智能工作流', desc: '多平台 AI 工具 API 集成方案，实现跨平台自动化创作流程。', tags: ['API 调用', '自动化', '集成'], img: 'assets/work-api.jpg' }
   ];
