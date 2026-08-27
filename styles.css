@@ -1302,6 +1302,12 @@ section {
   padding: 32px;
   overflow-y: auto;
   flex: 1;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.all-works-body::-webkit-scrollbar {
+  display: none;
 }
 
 .all-works-category {
