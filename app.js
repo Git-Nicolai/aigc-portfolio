@@ -13,7 +13,7 @@
   ];
 
   const WORKS = [
-    { id: 'w1', cat: 'ai短剧', title: '《仙途》', desc: '古风仙侠 AI 短剧，讲述修仙少女的成长之路。采用 AI 全流程生成，从角色设计到场景搭建再到成片输出。', tags: ['AI 短剧', '古风', '仙侠'], img: 'assets/work-xiantu.jpg', link: 'https://www.bilibili.com/video/BV1mbhc6cE1L/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w1', cat: 'ai短剧', title: '《九渊》', desc: '古风仙侠 AI 短剧，讲述修仙少女的成长之路。采用 AI 全流程生成，从角色设计到场景搭建再到成片输出。', tags: ['AI 短剧', '萌宝', '异界'], img: 'assets/work-xiantu.jpg', link: 'https://www.bilibili.com/video/BV1mbhc6cE1L/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w2', cat: 'ai图片', title: '梦境少女', desc: '梦幻风格 AI 人像生成系列，探索 AI 在艺术人像领域的无限可能。', tags: ['AI 图片', '人像', '梦幻'], img: 'assets/work-dream.jpg' },
     { id: 'w3', cat: '电商', title: '深层补水 焕活新生', desc: '护肤品牌 AI 视觉广告，将产品特性与科技美学完美融合。', tags: ['AI 图片', '商业', '护肤'], img: 'assets/work-skincare.jpg' },
     { id: 'w4', cat: '游戏买量视频', title: '未来出行·概念片', desc: '赛博朋克风格未来出行概念视频，展现 AI 视觉在科幻题材中的表现力。', tags: ['视频剪辑', '科幻', '概念'], img: 'assets/work-car.jpg' },
