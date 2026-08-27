@@ -52,7 +52,6 @@
   ];
 
   const FILTER_CATS = [
-    { key: 'all', label: '全部' },
     { key: '电商', label: '电商' },
     { key: '数字人', label: '数字人' },
     { key: '游戏买量视频', label: '游戏买量视频' },
@@ -81,8 +80,8 @@
 
   function renderFilterBar() {
     var bar = document.getElementById('filterBar');
-    bar.innerHTML = FILTER_CATS.map(function (c) {
-      return '<button class="filter-btn' + (c.key === 'all' ? ' active' : '') + '" data-cat="' + c.key + '">' + c.label + '</button>';
+    bar.innerHTML = FILTER_CATS.map(function (c, i) {
+      return '<button class="filter-btn' + (i === 0 ? ' active' : '') + '" data-cat="' + c.key + '">' + c.label + '</button>';
     }).join('');
   }
 
@@ -511,7 +510,7 @@
   function init() {
     renderServices();
     renderFilterBar();
-    renderWorks('all');
+    renderWorks(FILTER_CATS[0].key);
     renderTimeline();
     renderRadar();
     renderSkillBars();
