@@ -1176,6 +1176,12 @@ section {
   border-radius: var(--r-lg);
   background: var(--surface);
   border: 1px solid var(--border);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lightbox-content::-webkit-scrollbar {
+  display: none;
 }
 
 .lightbox-content img,
