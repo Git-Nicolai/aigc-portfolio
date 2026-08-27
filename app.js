@@ -386,6 +386,10 @@
   filterBar.addEventListener('mouseenter', function () { filterCarouselPaused = true; });
   filterBar.addEventListener('mouseleave', function () { filterCarouselPaused = false; });
 
+  var worksGrid = document.getElementById('worksGrid');
+  worksGrid.addEventListener('mouseenter', function () { filterCarouselPaused = true; });
+  worksGrid.addEventListener('mouseleave', function () { filterCarouselPaused = false; });
+
   /* ===== FORM ===== */
 
   var contactForm = document.getElementById('contactForm');
