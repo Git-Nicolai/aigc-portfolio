@@ -1182,6 +1182,20 @@ section {
 .lightbox-content video {
   width: 100%;
   border-radius: var(--r-lg) var(--r-lg) 0 0;
+  cursor: zoom-in;
+  transition: all 0.3s var(--ease);
+}
+
+.lightbox-content img.is-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 210;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  border-radius: 0;
+  cursor: zoom-out;
+  background: rgba(0, 0, 0, 0.95);
 }
 
 .lightbox-info {

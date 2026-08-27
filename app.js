@@ -19,7 +19,7 @@
     { id: 'w2', cat: 'ai图片', title: '梦境少女', desc: '梦幻风格 AI 人像生成系列，探索 AI 在艺术人像领域的无限可能。', tags: ['AI 图片', '人像', '梦幻'], img: 'assets/work-dream.jpg' },
     { id: 'w3', cat: '电商', title: '深层补水 焕活新生', desc: '护肤品牌 AI 视觉广告，将产品特性与科技美学完美融合。', tags: ['AI 图片', '商业', '护肤'], img: 'assets/work-skincare.jpg', link: 'https://www.bilibili.com/video/BV1wFhA6fESY/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w12', cat: '电商', title: '作品名称 12', desc: '电商 AI 视觉作品描述。', tags: ['电商', '标签K', '标签L'], img: 'assets/work-skincare.jpg', link: 'https://www.bilibili.com/video/BV1kFhA6ZE4C/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w13', cat: '电商', title: '作品名称 13', desc: '电商 AI 视觉作品描述。', tags: ['电商', '标签M', '标签N'], img: 'assets/work-skincare.jpg' },
+    { id: 'w13', cat: '电商', title: '作品名称 13', desc: '电商 AI 视觉作品描述。', tags: ['电商', '标签M', '标签N'], img: 'assets/work-dj-detail.png' },
     { id: 'w14', cat: '电商', title: '作品名称 14', desc: '电商 AI 视觉作品描述。', tags: ['电商', '标签O', '标签P'], img: 'assets/work-skincare.jpg' },
     { id: 'w15', cat: '数字人', title: '作品名称 15', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签Q', '标签R'], video: 'assets/work-video15.mp4' },
     { id: 'w16', cat: '数字人', title: '作品名称 16', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签S', '标签T'], video: 'assets/work-video16.mp4' },
@@ -245,6 +245,13 @@
   lightboxClose.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', function (e) {
     if (e.target === lightbox) closeLightbox();
+  });
+
+  // Fullscreen toggle for lightbox images
+  lightboxContent.addEventListener('click', function (e) {
+    var img = e.target.closest('img');
+    if (!img) return;
+    img.classList.toggle('is-fullscreen');
   });
 
   /* ===== FILTER ===== */
