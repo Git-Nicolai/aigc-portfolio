@@ -632,14 +632,16 @@ section {
   overflow: hidden;
 }
 
-.work-card-image img {
+.work-card-image img,
+.work-card-image video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s var(--ease);
 }
 
-.work-card:hover .work-card-image img { transform: scale(1.05); }
+.work-card:hover .work-card-image img,
+.work-card:hover .work-card-image video { transform: scale(1.05); }
 
 .work-card-image::after {
   content: '';

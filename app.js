@@ -14,11 +14,18 @@
 
   const WORKS = [
     { id: 'w1', cat: 'ai短剧', title: '《九渊》', desc: '古风仙侠 AI 短剧，讲述修仙少女的成长之路。采用 AI 全流程生成，从角色设计到场景搭建再到成片输出。', tags: ['AI 短剧', '萌宝', '异界'], img: 'assets/work-xiantu.jpg', link: 'https://www.bilibili.com/video/BV1mbhc6cE1L/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w7', cat: 'ai短剧', title: '作品名称 7', desc: 'AI 短剧作品描述，展示 AIGC 在短剧创作中的创意应用。', tags: ['AI 短剧', '标签A', '标签B'], img: 'assets/work-tianyuan.jpg' },
-    { id: 'w8', cat: 'ai短剧', title: '作品名称 8', desc: 'AI 短剧作品描述，展示 AIGC 在短剧创作中的创意应用。', tags: ['AI 短剧', '标签C', '标签D'], img: 'assets/work-xiantu.jpg' },
+    { id: 'w7', cat: 'ai短剧', title: '《天渊》第一集', desc: 'AI 短剧作品描述，展示 AIGC 在短剧创作中的创意应用。', tags: ['AI 短剧', '玄幻', '腹黑'], img: 'assets/work-tianyuan.jpg', link: 'https://www.bilibili.com/video/BV1tbhc6cEwT/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w8', cat: 'ai短剧', title: '《天渊》第二集', desc: 'AI 短剧作品描述，展示 AIGC 在短剧创作中的创意应用。', tags: ['AI 短剧', '玄幻', '腹黑'], img: 'assets/work-tianyuan2.jpg', link: 'https://www.bilibili.com/video/BV1tbhc6wE1a/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w2', cat: 'ai图片', title: '梦境少女', desc: '梦幻风格 AI 人像生成系列，探索 AI 在艺术人像领域的无限可能。', tags: ['AI 图片', '人像', '梦幻'], img: 'assets/work-dream.jpg' },
     { id: 'w3', cat: '电商', title: '深层补水 焕活新生', desc: '护肤品牌 AI 视觉广告，将产品特性与科技美学完美融合。', tags: ['AI 图片', '商业', '护肤'], img: 'assets/work-skincare.jpg' },
+    { id: 'w12', cat: '电商', title: '作品名称 12', desc: '电商 AI 视觉作品描述。', tags: ['电商', '标签K', '标签L'], img: 'assets/work-skincare.jpg' },
+    { id: 'w13', cat: '电商', title: '作品名称 13', desc: '电商 AI 视觉作品描述。', tags: ['电商', '标签M', '标签N'], img: 'assets/work-skincare.jpg' },
+    { id: 'w14', cat: '电商', title: '作品名称 14', desc: '电商 AI 视觉作品描述。', tags: ['电商', '标签O', '标签P'], img: 'assets/work-skincare.jpg' },
+    { id: 'w15', cat: '数字人', title: '作品名称 15', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签Q', '标签R'], video: 'assets/work-video15.mp4' },
+    { id: 'w16', cat: '数字人', title: '作品名称 16', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签S', '标签T'], video: 'assets/work-video16.mp4' },
+    { id: 'w17', cat: '数字人', title: '作品名称 17', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签U', '标签V'], video: 'assets/work-video17.mp4' },
     { id: 'w4', cat: '游戏买量视频', title: '未来出行·概念片', desc: '赛博朋克风格未来出行概念视频，展现 AI 视觉在科幻题材中的表现力。', tags: ['视频剪辑', '科幻', '概念'], img: 'assets/work-car.jpg' },
+    { id: 'w18', cat: '游戏买量视频', title: '作品名称 18', desc: '游戏买量视频 AI 视觉作品描述。', tags: ['游戏买量', '标签W', '标签X'], img: 'assets/work-car.jpg' },
     { id: 'w5', cat: 'ai信息流', title: 'AI 信息流可视化', desc: '基于 AI 的数据可视化信息流设计，将复杂数据转化为直观视觉语言。', tags: ['AI 信息流', '数据', '可视化'], img: 'assets/work-infoflow.jpg' },
     { id: 'w6', cat: 'agent', title: 'API 智能工作流', desc: '多平台 AI 工具 API 集成方案，实现跨平台自动化创作流程。', tags: ['API 调用', '自动化', '集成'], img: 'assets/work-api.jpg' }
   ];
@@ -86,7 +93,9 @@
     var filtered = filter === 'all' ? WORKS : WORKS.filter(function (w) { return w.cat === filter; });
     grid.innerHTML = filtered.map(function (w) {
       return '<div class="work-card" data-id="' + w.id + '">' +
-        '<div class="work-card-image"><img src="' + w.img + '" alt="' + w.title + '" loading="lazy"></div>' +
+        '<div class="work-card-image">' + (w.video
+          ? '<video src="' + w.video + '" muted loop playsinline autoplay></video>'
+          : '<img src="' + w.img + '" alt="' + w.title + '" loading="lazy">') + '</div>' +
         '<div class="work-card-info">' +
         '<h3>' + w.title + '</h3>' +
         '<div class="work-card-tags">' + w.tags.map(function (t) { return '<span>' + t + '</span>'; }).join('') + '</div>' +
