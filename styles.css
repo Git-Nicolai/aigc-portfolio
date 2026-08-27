@@ -640,6 +640,11 @@ section {
   transition: transform 0.5s var(--ease);
 }
 
+.work-card-image video {
+  object-fit: contain;
+  background: #000;
+}
+
 .work-card:hover .work-card-image img,
 .work-card:hover .work-card-image video { transform: scale(1.05); }
 
