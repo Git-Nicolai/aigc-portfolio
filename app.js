@@ -215,17 +215,28 @@
   var lightboxClose = document.getElementById('lightboxClose');
 
   function openLightbox(work) {
-    lightboxContent.innerHTML = '<img src="' + work.img + '" alt="' + work.title + '">' +
-      '<div class="lightbox-info">' +
-      '<h3>' + work.title + '</h3>' +
-      '<div class="tags">' + work.tags.map(function (t) { return '<span>' + t + '</span>'; }).join('') + '</div>' +
-      '<p>' + work.desc + '</p>' +
-      '</div>';
+    if (work.video) {
+      lightboxContent.innerHTML = '<video src="' + work.video + '" controls autoplay playsinline></video>' +
+        '<div class="lightbox-info">' +
+        '<h3>' + work.title + '</h3>' +
+        '<div class="tags">' + work.tags.map(function (t) { return '<span>' + t + '</span>'; }).join('') + '</div>' +
+        '<p>' + work.desc + '</p>' +
+        '</div>';
+    } else {
+      lightboxContent.innerHTML = '<img src="' + work.img + '" alt="' + work.title + '">' +
+        '<div class="lightbox-info">' +
+        '<h3>' + work.title + '</h3>' +
+        '<div class="tags">' + work.tags.map(function (t) { return '<span>' + t + '</span>'; }).join('') + '</div>' +
+        '<p>' + work.desc + '</p>' +
+        '</div>';
+    }
     lightbox.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
+    var video = lightboxContent.querySelector('video');
+    if (video) { video.pause(); video.currentTime = 0; }
     lightbox.classList.remove('is-open');
     document.body.style.overflow = '';
     setTimeout(function () { lightboxContent.innerHTML = ''; }, 400);

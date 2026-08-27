@@ -1178,7 +1178,8 @@ section {
   border: 1px solid var(--border);
 }
 
-.lightbox-content img {
+.lightbox-content img,
+.lightbox-content video {
   width: 100%;
   border-radius: var(--r-lg) var(--r-lg) 0 0;
 }
