@@ -20,7 +20,6 @@
     { id: 'w3', cat: '电商', title: '鼠标宣传片', desc: '护肤品牌 AI 视觉广告，将产品特性与科技美学完美融合。', tags: ['电商', '商业', '鼠标'], img: 'assets/work-skincare.jpg', link: 'https://www.bilibili.com/video/BV1wFhA6fESY/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w12', cat: '电商', title: '乐事宣传片', desc: '电商 AI 视觉作品描述。', tags: ['电商', '商业', '乐事'], img: 'assets/work-skincare.jpg', link: 'https://www.bilibili.com/video/BV1kFhA6ZE4C/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w13', cat: '电商', title: '大疆详情页', desc: '电商 AI 视觉作品描述。', tags: ['电商', '商业', 'DJI'], img: 'assets/work-dj-detail.png' },
-    { id: 'w14', cat: '电商', title: '作品名称 14', desc: '电商 AI 视觉作品描述。', tags: ['电商', '标签O', '标签P'], img: 'assets/work-skincare.jpg' },
     { id: 'w15', cat: '数字人', title: '作品名称 15', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签Q', '标签R'], video: 'assets/work-video15.mp4' },
     { id: 'w16', cat: '数字人', title: '作品名称 16', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签S', '标签T'], video: 'assets/work-video16.mp4' },
     { id: 'w17', cat: '数字人', title: '作品名称 17', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签U', '标签V'], video: 'assets/work-video17.mp4' },
