@@ -95,7 +95,8 @@
     var grid = document.getElementById('worksGrid');
     var filtered = filter === 'all' ? WORKS : WORKS.filter(function (w) { return w.cat === filter; });
     grid.innerHTML = filtered.map(function (w) {
-      return '<div class="work-card" data-id="' + w.id + '">' +
+      var onclickAttr = w.link ? ' onclick="window.open(\'' + w.link + '\',\'_blank\')"' : '';
+      return '<div class="work-card" data-id="' + w.id + '"' + onclickAttr + '>' +
         '<div class="work-card-image">' + (w.video
           ? '<video src="' + w.video + '" muted loop playsinline autoplay></video>'
           : '<img src="' + w.img + '" alt="' + w.title + '" loading="lazy">') + '</div>' +
@@ -300,7 +301,8 @@
       html += '<div class="all-works-cat-title">' + cat.label + '</div>';
       html += '<div class="all-works-cat-grid">';
       works.forEach(function (w) {
-        html += '<div class="all-works-card" data-id="' + w.id + '">';
+        var onclickAttr = w.link ? ' onclick="window.open(\'' + w.link + '\',\'_blank\')"' : '';
+        html += '<div class="all-works-card" data-id="' + w.id + '"' + onclickAttr + '>';
         html += '<div class="all-works-card-img">';
         if (w.video) {
           html += '<video src="' + w.video + '" muted loop playsinline></video>';
