@@ -13,7 +13,7 @@
   ];
 
   const WORKS = [
-    { id: 'w1', cat: 'ai短剧', title: '《九渊》', desc: '古风仙侠 AI 短剧，讲述修仙少女的成长之路。采用 AI 全流程生成，从角色设计到场景搭建再到成片输出。', tags: ['AI 短剧', '萌宝', '异界'], img: 'assets/work-xiantu.jpg', link: 'https://www.bilibili.com/video/BV1mbhc6cE1L/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w1', cat: 'ai短剧', title: '《阿九寻爹记》', desc: '古风仙侠 AI 短剧，讲述修仙少女的成长之路。采用 AI 全流程生成，从角色设计到场景搭建再到成片输出。', tags: ['AI 短剧', '萌宝', '异界'], img: 'assets/work-xiantu.jpg', link: 'https://www.bilibili.com/video/BV1mbhc6cE1L/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w7', cat: 'ai短剧', title: '《天渊》第一集', desc: 'AI 短剧作品描述，展示 AIGC 在短剧创作中的创意应用。', tags: ['AI 短剧', '玄幻', '腹黑'], img: 'assets/work-tianyuan.jpg', link: 'https://www.bilibili.com/video/BV1tbhc6cEwT/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w8', cat: 'ai短剧', title: '《天渊》第二集', desc: 'AI 短剧作品描述，展示 AIGC 在短剧创作中的创意应用。', tags: ['AI 短剧', '玄幻', '腹黑'], img: 'assets/work-tianyuan2.jpg', link: 'https://www.bilibili.com/video/BV1tbhc6wE1a/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w2', cat: 'ai图片', title: '梦境少女', desc: '梦幻风格 AI 人像生成系列，探索 AI 在艺术人像领域的无限可能。', tags: ['AI 图片', '人像', '梦幻'], img: 'assets/work-dream.jpg' },
