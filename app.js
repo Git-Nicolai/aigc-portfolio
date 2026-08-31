@@ -31,7 +31,7 @@
     { id: 'w4', cat: '游戏买量视频', title: '潜艇逃生', desc: '赛博朋克风格未来出行概念视频，展现 AI 视觉在科幻题材中的表现力。', tags: ['游戏买量', '科幻', '逃生'], img: 'assets/work-game-ua1-new.png', link: 'https://www.bilibili.com/video/BV1qThc6LEmQ/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w18', cat: '游戏买量视频', title: '末日地下堡垒', desc: '游戏买量视频 AI 视觉作品描述。', tags: ['游戏买量', '科幻', '生存'], img: 'assets/work-game-ua2-new.png', link: 'https://www.bilibili.com/video/BV1CdhF6XEHM/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w19', cat: '游戏买量视频', title: '小小木材商', desc: '游戏买量视频 AI 视觉作品描述。', tags: ['游戏买量', '养成', '抖音小游戏'], img: 'assets/work-game-ua3.png', link: 'https://www.bilibili.com/video/BV1vC4f6wE1U/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w6', cat: 'agent', title: 'API 智能工作流', desc: '多平台 AI 工具 API 集成方案，实现跨平台自动化创作流程。', tags: ['API 调用', '自动化', '集成'], img: 'assets/work-api.jpg' }
+    { id: 'w6', cat: 'agent', title: '复用GitHub的Skill', desc: '多平台 AI 工具 API 集成方案，实现跨平台自动化创作流程。', tags: ['API 调用', '复用', 'SKill'], img: 'assets/work-api-new.png' }
   ];
 
   const EXPERIENCES = [
