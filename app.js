@@ -16,27 +16,27 @@
     { id: 'w1', cat: 'ai短剧', title: '《阿九寻爹记》', desc: '古风仙侠 AI 短剧，讲述修仙少女的成长之路。采用 AI 全流程生成，从角色设计到场景搭建再到成片输出。', tags: ['AI 短剧', '萌宝', '异界'], img: 'assets/work-xiantu.jpg', link: 'https://www.bilibili.com/video/BV1mbhc6cE1L/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w7', cat: 'ai短剧', title: '《天渊》第一集', desc: 'AI 短剧作品描述，展示 AIGC 在短剧创作中的创意应用。', tags: ['AI 短剧', '玄幻', '腹黑'], img: 'assets/work-tianyuan.jpg', link: 'https://www.bilibili.com/video/BV1tbhc6cEwT/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w8', cat: 'ai短剧', title: '《天渊》第二集', desc: 'AI 短剧作品描述，展示 AIGC 在短剧创作中的创意应用。', tags: ['AI 短剧', '玄幻', '腹黑'], img: 'assets/work-tianyuan2.jpg', link: 'https://www.bilibili.com/video/BV1tbhc6wE1a/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w2', cat: 'ai图片', title: '梦境少女', desc: '梦幻风格 AI 人像生成系列，探索 AI 在艺术人像领域的无限可能。', tags: ['AI 图片', '人像', '梦幻'], img: 'assets/work-dream.jpg' },
-    { id: 'w3', cat: '电商', title: '鼠标宣传片', desc: '护肤品牌 AI 视觉广告，将产品特性与科技美学完美融合。', tags: ['电商', '商业', '鼠标'], img: 'assets/work-tiktok2.png', link: 'https://www.bilibili.com/video/BV1wFhA6fESY/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w12', cat: '电商', title: '乐事宣传片', desc: '电商 AI 视觉作品描述。', tags: ['电商', '商业', '乐事'], img: 'assets/work-tiktok3.png', link: 'https://www.bilibili.com/video/BV1kFhA6ZE4C/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w13', cat: '电商', title: '大疆详情页', desc: '电商 AI 视觉作品描述。', tags: ['电商', '商业', 'DJI'], img: 'assets/work-dj-detail.png', link: 'https://www.bilibili.com/video/BV1eRtA6gEJK/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w20', cat: 'tvc广告', title: '大疆', desc: 'TVC广告 AI 视觉作品描述。', tags: ['TVC广告', '大疆', '广告'], img: 'assets/work-dj-detail.png', link: 'https://www.bilibili.com/video/BV1zv4f6qEWC/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w21', cat: 'tvc广告', title: '可口可乐', desc: 'TVC广告 AI 视觉作品描述。', tags: ['TVC广告', 'Coke', '广告'], img: 'assets/work-dj-detail.png', link: 'https://www.bilibili.com/video/BV1zv4f6qEQq/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w22', cat: 'tvc广告', title: '奢侈品', desc: 'TVC广告 AI 视觉作品描述。', tags: ['TVC广告', '赛博', '广告'], img: 'assets/work-dj-detail.png', link: 'https://www.bilibili.com/video/BV1o64f6PE2i/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w15', cat: '数字人', title: '作品名称 15', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签Q', '标签R'], video: 'assets/work-video15.mp4' },
-    { id: 'w16', cat: '数字人', title: '作品名称 16', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签S', '标签T'], video: 'assets/work-video16.mp4' },
-    { id: 'w17', cat: '数字人', title: '作品名称 17', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '标签U', '标签V'], video: 'assets/work-video17.mp4' },
-    { id: 'w4', cat: '游戏买量视频', title: '潜艇逃生', desc: '赛博朋克风格未来出行概念视频，展现 AI 视觉在科幻题材中的表现力。', tags: ['游戏买量', '科幻', '逃生'], img: 'assets/work-game-ua1.png', link: 'https://www.bilibili.com/video/BV1qThc6LEmQ/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w18', cat: '游戏买量视频', title: '末日地下堡垒', desc: '游戏买量视频 AI 视觉作品描述。', tags: ['游戏买量', '科幻', '生存'], img: 'assets/work-game-ua2.png', link: 'https://www.bilibili.com/video/BV1CdhF6XEHM/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w2', cat: 'ai图片', title: '乐事故事板', desc: '梦幻风格 AI 人像生成系列，探索 AI 在艺术人像领域的无限可能。', tags: ['AI 图片', '故事板', '乐事'], img: 'assets/work-ai-img1.png' },
+    { id: 'w25', cat: 'ai图片', title: '电影感', desc: 'AI 图片作品描述。', tags: ['AI 图片'], img: 'assets/work-ai-img2.png' },
+    { id: 'w26', cat: 'ai图片', title: 'AI电影人像', desc: 'AI 图片作品描述。', tags: ['AI 图片'], img: 'assets/work-ai-img3.png' },
+    { id: 'w3', cat: '电商', title: '鼠标宣传片', desc: '护肤品牌 AI 视觉广告，将产品特性与科技美学完美融合。', tags: ['电商', '商业', '鼠标'], img: 'assets/work-tiktok2-new.png', link: 'https://www.bilibili.com/video/BV1wFhA6fESY/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w12', cat: '电商', title: '乐事宣传片', desc: '电商 AI 视觉作品描述。', tags: ['电商', '商业', '乐事'], img: 'assets/work-tiktok3-new.png', link: 'https://www.bilibili.com/video/BV1kFhA6ZE4C/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w13', cat: '电商', title: '大疆详情页', desc: '电商 AI 视觉作品描述。', tags: ['电商', '商业', 'DJI'], img: 'assets/work-dj-detail.jpg' },
+    { id: 'w20', cat: 'tvc广告', title: '大疆', desc: 'TVC广告 AI 视觉作品描述。', tags: ['TVC广告', '大疆', '广告'], img: 'assets/work-tvc-dj-new.png', link: 'https://www.bilibili.com/video/BV1eRtA6gEJK/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w21', cat: 'tvc广告', title: '可口可乐', desc: 'TVC广告 AI 视觉作品描述。', tags: ['TVC广告', 'Coke', '广告'], img: 'assets/work-tvc-coke-new.png', link: 'https://www.bilibili.com/video/BV1zv4f6qEQq/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w22', cat: 'tvc广告', title: '奢侈品', desc: 'TVC广告 AI 视觉作品描述。', tags: ['TVC广告', '赛博', '广告'], img: 'assets/work-tvc-luxury-new.jpeg', link: 'https://www.bilibili.com/video/BV1o64f6PE2i/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w15', cat: '数字人', title: '古装', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '古装'], video: 'assets/work-video15.mp4' },
+    { id: 'w16', cat: '数字人', title: '都市风', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '都市'], video: 'assets/work-video16.mp4' },
+    { id: 'w17', cat: '数字人', title: '休闲风', desc: '数字人 AI 视觉作品描述。', tags: ['数字人', '休闲'], video: 'assets/work-video17.mp4' },
+    { id: 'w4', cat: '游戏买量视频', title: '潜艇逃生', desc: '赛博朋克风格未来出行概念视频，展现 AI 视觉在科幻题材中的表现力。', tags: ['游戏买量', '科幻', '逃生'], img: 'assets/work-game-ua1-new.png', link: 'https://www.bilibili.com/video/BV1qThc6LEmQ/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
+    { id: 'w18', cat: '游戏买量视频', title: '末日地下堡垒', desc: '游戏买量视频 AI 视觉作品描述。', tags: ['游戏买量', '科幻', '生存'], img: 'assets/work-game-ua2-new.png', link: 'https://www.bilibili.com/video/BV1CdhF6XEHM/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
     { id: 'w19', cat: '游戏买量视频', title: '小小木材商', desc: '游戏买量视频 AI 视觉作品描述。', tags: ['游戏买量', '养成', '抖音小游戏'], img: 'assets/work-game-ua3.png', link: 'https://www.bilibili.com/video/BV1vC4f6wE1U/?share_source=copy_web&vd_source=73a8583309333d473630f5bff63a1b7a' },
-    { id: 'w5', cat: 'ai信息流', title: 'AI 信息流可视化', desc: '基于 AI 的数据可视化信息流设计，将复杂数据转化为直观视觉语言。', tags: ['AI 信息流', '数据', '可视化'], img: 'assets/work-infoflow.jpg' },
     { id: 'w6', cat: 'agent', title: 'API 智能工作流', desc: '多平台 AI 工具 API 集成方案，实现跨平台自动化创作流程。', tags: ['API 调用', '自动化', '集成'], img: 'assets/work-api.jpg' }
   ];
 
   const EXPERIENCES = [
-    { date: '2024.01 - 至今', title: 'AI 视觉创意项目负责人', desc: '负责多个 AI 短剧及 AI 视觉项目的创意策划与制作管理，带领团队交付 50+ 项目' },
-    { date: '2023.06 - 2023.12', title: '电商品牌 AI 内容制作', desc: '为电商品牌提供 AI 驱动的视觉内容制作服务，包括产品图生成与信息流广告' },
-    { date: '2022.01 - 2023.05', title: '数字营销内容制作', desc: '从事数字营销视觉内容制作，逐步探索 AI 工具在创意工作流中的应用' }
+    { date: '2025.12 - 至今', title: 'AI漫剧片段生产', desc: '负责 AI 短剧的抽卡制作，根据项目需求灵活适配，基于投放需求快速产出 AI 短剧片段' },
+    { date: '2025.9 - 2025.12', title: 'AI漫剧资产生成', desc: '负责短剧 AI 画面素材的定向生产，根据剧本与分镜需求生成对应场景、角色、镜头画面' }
   ];
 
   const SKILL_LEVELS = [
@@ -60,7 +60,6 @@
     { key: 'tvc广告', label: 'TVC广告' },
     { key: '数字人', label: '数字人' },
     { key: '游戏买量视频', label: '游戏买量视频' },
-    { key: 'ai信息流', label: 'AI信息流' },
     { key: 'ai短剧', label: 'AI短剧' },
     { key: 'ai图片', label: 'AI图片' },
     { key: 'agent', label: 'Agent+Skill' }
